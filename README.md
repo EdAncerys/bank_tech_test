@@ -56,7 +56,13 @@ So we prevent withdrawals bigger than a current balance
 We able to raise an error
 ```
 
-### domain Models
+### Domain Models
+
+| Bank                     | UserAccount    | Statements     |
+| :----------------------- | :------------- | :------------- |
+| #deposit_to_account      | #user_deposit  | #print_balance |
+| #withdraw_from_account   | #user_withdraw |
+| #print_account_statement |                |
 
 ## Self-assessment
 
