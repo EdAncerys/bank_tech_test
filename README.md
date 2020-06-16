@@ -1,21 +1,19 @@
 # Bank tech test
 
-Today, you'll practice doing a tech test.
+Session goals:
 
-For most tech tests, you'll essentially have unlimited time.  This practice session is about producing the best code you can when there is a minimal time pressure.
-
-You'll get to practice your OO design and TDD skills.
-
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
+- Producing the best code you can when there is a minimal time pressure.
+- Practice your OO design and TDD skills.
+- Work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
 
 ## Specification
 
 ### Requirements
 
-* You should be able to interact with your code via a REPL like IRB or the JavaScript console.  (You don't need to implement a command line interface that takes input from STDIN.)
-* Deposits, withdrawal.
-* Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+- You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
+- Deposits, withdrawal.
+- Account statement (date, amount, balance) printing.
+- Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
 ### Acceptance criteria
 
@@ -31,6 +29,34 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
+### User Stories
+
+```
+As a User
+So I can have a balance
+I am able to deposit to my account
+```
+
+```
+As a User
+So I can use my card
+Im able to withdraw from my account
+```
+
+```
+As a User
+So I can know how much I spent on purchases
+Im able to print out a bank statement
+```
+
+```
+As a Bank
+So we prevent withdrawals bigger than a current balance
+We able to raise an error
+```
+
+### domain Models
 
 ## Self-assessment
 
