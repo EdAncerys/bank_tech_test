@@ -58,11 +58,13 @@ We able to raise an error
 
 ### Domain Models
 
-| Bank                     | UserAccount    | Statements     |
-| :----------------------- | :------------- | :------------- |
-| #deposit_to_account      | #user_deposit  | #print_balance |
-| #withdraw_from_account   | #user_withdraw |
-| #print_account_statement |                |
+| Bank                       | UserAccount      | Statements     |
+| :------------------------- | :--------------- | :------------- |
+| #deposit_to_account()      | #user_deposit()  | #print_balance |
+| #withdraw_from_account()   | #user_withdraw() |
+| #print_account_statement() |                  |
+
+### Final Product Functionality
 
 ## Self-assessment
 
