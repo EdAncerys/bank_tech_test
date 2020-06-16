@@ -8,4 +8,8 @@ class Bank
   def deposit_to_account(amount)
     @balance += amount
   end
+
+  def withdraw_from_account(amount)
+    @balance -= amount
+  end
 end

@@ -10,5 +10,11 @@ describe Bank do
     subject.deposit_to_account(100)
     expect(subject.balance).to eq 100
   end
-  
+
+   it 'should be able to witdraw from an account' do
+    subject.deposit_to_account(100)
+    subject.withdraw_from_account(100)
+    expect(subject.balance).to eq 0
+  end
+
 end
