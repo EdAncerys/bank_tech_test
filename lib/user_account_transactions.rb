@@ -7,10 +7,10 @@ class UserAccountTransactions
   end
 
   def user_deposits(transaction, balance)
-    @user_transaktions << "#{@time} || £#{"%.2f" % transaction} || || £#{"%.2f" % balance}"
+    @user_transaktions << "#{@time} || £#{"%.2f" % transaction} || || £#{"%.2f" % balance}\n"
   end
 
   def user_withdrawals(transaction, balance)
-    @user_transaktions << "#{@time} || || £#{"%.2f" % transaction} || £#{"%.2f" % balance}"
+    @user_transaktions << "#{@time} || || £#{"%.2f" % transaction} || £#{"%.2f" % balance}\n"
   end
 end
