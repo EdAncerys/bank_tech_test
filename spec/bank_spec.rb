@@ -4,6 +4,7 @@ describe Bank do
   let(:bank) { described_class.new }
   let(:deposit_transaction) { "10/01/2012 || 1000.00 || || 1000.00" }
   let(:statements) { double("Statements", print_balance: deposit_transaction) }
+  let(:user_account) { double("UserAccountTransactions") }
 
   it 'should have account balance 0 at start' do
     expect(bank.balance).to eq 0    
@@ -38,10 +39,11 @@ describe Bank do
     end
   end
 
-  context 'Print account statement with deposit only' do
+  context 'Print account statement when deposit made' do
     it 'should be able to print account statement' do
-      allow(statements).to receive(:print_balance) { deposit_transaction }
-      bank = Bank.new(statements)
+      allow(user_account).to receive(:user_transaktions)
+      allow(statements).to receive(:print_balance).with deposit_transaction
+      bank = Bank.new(user_account, statements)
 
       expect(bank.print_account_statement).to eq deposit_transaction      
     end
