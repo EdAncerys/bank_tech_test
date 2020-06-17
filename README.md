@@ -1,4 +1,4 @@
-# Bank tech test
+\_<h1 align="center">'Bank_tech_test'</h1>
 
 Session goals:
 
@@ -64,10 +64,59 @@ We able to raise an error
 | #withdraw_from_account()   | #user_withdrawals()     |
 | #print_account_statement() |                         |
 
+## Getting Started
+
+To run **Bank_tech_test** you will have to fork this repo and clone to your local machine.
+
+Navigate to reposotory via comand line and follow instructions below:
+
+To install gems dependencies used in a project:
+
+```
+bundle
+```
+
+To run tests with **RSpec**:
+
+```
+rspec
+```
+
+To run program in **irb** enviroment:
+
+```
+irb
+ed@Eds-MacBook-Pro bank_tech_test (master) $ irb
+2.7.0 :001 > require './lib/bank.rb'
+ => true
+2.7.0 :002 > bank = Bank.new
+2.7.0 :003 > bank.deposit_to_account 100
+ => 100
+2.7.0 :004 > bank.withdraw_from_account 40
+ => 60
+2.7.0 :005 > bank.print_account_statement
+ => "date || credit || debit || balance, 17/06/2020 || || £40.00 || £100.00\n, 17/06/2020 || £100.00 || || £0.00\n"
+2.7.0 :006 >
+```
+
 ### Final Product Functionality
 
-## Self-assessment
+As a User able to perform bank transaktion such as deposit to bank account, witdraw from bank account, print bank statements.
 
-Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
+Account transactiosn stored in local storage.
 
-![Tracking pixel](https://githubanalytics.herokuapp.com/course/individual_challenges/bank_tech_test.md)
+### RSpec and test coverage
+
+<div align="center">
+  <img alt="bank_tech_test" height="400px" src="./images/tests_bank_01.png">
+</div>
+
+### User interface preview
+
+<div align="center">
+  <img alt="bank_tech_test" height="300px" src="./images/irb_bank_01.png">
+</div>
+
+## License
+
+The package is available as open source
