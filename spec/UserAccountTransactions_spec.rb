@@ -16,7 +16,7 @@ describe UserAccountTransactions do
     expect(bank_statement.user_transaktions.last).to eq "#{time} || £#{"%.2f" % transaktion} || || £#{"%.2f" % balance}"
   end
 
-  it 'should be able to record user withdrawals transaktions' do
+  it 'should be able to record user withdrawals from account' do
     time = Time.now.strftime('%d-%m-%Y')
     transaktion = 500
     balance = transaktion

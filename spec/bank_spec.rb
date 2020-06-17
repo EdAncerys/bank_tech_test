@@ -20,6 +20,14 @@ describe Bank do
     expect(bank.balance).to eq 0
   end
 
+  context 'Catch errors if user transaktion not walid' do
+    
+    it 'should not allow to deposit negative amount' do
+      error = 'Transaktion not valid: not able to deposit negative balance'
+      expect { bank.deposit_to_account(-100) }.to raise_error error
+    end
+  end
+
   context 'Print account statement with deposit only' do
     it 'should be able to print account statement' do
       allow(statements).to receive(:print_balance) { deposit_transaction }

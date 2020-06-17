@@ -9,6 +9,7 @@ class Bank
   end
 
   def deposit_to_account(amount)
+    raise 'Transaktion not valid: not able to deposit negative balance' if amount < 0
     @balance += amount
   end
 
