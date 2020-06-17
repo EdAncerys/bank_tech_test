@@ -1,12 +1,16 @@
+# frozen_string_literal: true
+
 class Statements
   attr_accessor :print_user_transaktions
 
   def initialize
-    @print_user_transaktions = ["date || credit || debit || balance"]
+    @print_user_transaktions = ['date || credit || debit || balance']
   end
 
   def print_balance(transaktions)
-    raise 'Statement not available: no user transaktion been made' if user_made_transaktion?(transaktions)
+    if user_made_transaktion?(transaktions)
+      raise 'Statement not available: no user transaktion been made'
+    end
 
     transaktions.reverse.each do |tran|
       @print_user_transaktions << tran
@@ -14,10 +18,9 @@ class Statements
     @print_user_transaktions.join(', ')
   end
 
-  private 
+  private
 
   def user_made_transaktion?(transaktions)
     transaktions.empty?
   end
-
 end

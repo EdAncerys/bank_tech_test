@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserAccountTransactions
   attr_reader :time, :user_transaktions
 
@@ -7,10 +9,10 @@ class UserAccountTransactions
   end
 
   def user_deposits(transaction, balance)
-    @user_transaktions << "#{@time} || £#{"%.2f" % transaction} || || £#{"%.2f" % balance}\n"
+    @user_transaktions << "#{@time} || £#{'%.2f' % transaction} || || £#{'%.2f' % balance}\n"
   end
 
   def user_withdrawals(transaction, balance)
-    @user_transaktions << "#{@time} || || £#{"%.2f" % transaction} || £#{"%.2f" % balance}\n"
+    @user_transaktions << "#{@time} || || £#{'%.2f' % transaction} || £#{'%.2f' % balance}\n"
   end
 end
