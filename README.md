@@ -68,7 +68,7 @@ We able to raise an error
 
 To run **Bank_tech_test** you will have to fork this repo and clone to your local machine.
 
-Navigate to reposotory via comand line and follow instructions below:
+Navigate to repository via command line and follow instructions below:
 
 To install gems dependencies used in a project:
 
@@ -82,7 +82,7 @@ To run tests with **RSpec**:
 rspec
 ```
 
-To run program in **irb** enviroment:
+To run the program in **irb** environment:
 
 ```
 irb
@@ -101,9 +101,9 @@ ed@Eds-MacBook-Pro bank_tech_test (master) $ irb
 
 ### Final Product Functionality
 
-As a User able to perform bank transaktion such as deposit to bank account, witdraw from bank account, print bank statements.
+As a User able to perform bank transactions such as a deposit to a bank account, withdraw from a bank account, print bank statements.
 
-Account transactiosn stored in local storage.
+Account transactions stored in local storage.
 
 ### RSpec and test coverage
 
