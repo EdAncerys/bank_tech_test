@@ -20,7 +20,7 @@ describe Bank do
     expect(bank.balance).to eq 0
   end
 
-  context 'See account statement with deposit only' do
+  context 'Print account statement with deposit only' do
     it 'should be able to print account statement' do
       allow(statements).to receive(:print_balance) { deposit_transaction }
       bank = Bank.new(statements)
