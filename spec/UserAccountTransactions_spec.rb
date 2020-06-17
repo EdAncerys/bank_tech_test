@@ -5,11 +5,11 @@ describe UserAccountTransactions do
   let(:bank_statement) { described_class.new}
 
   it 'should be able to record user transaktion time' do
-    expect(subject.time).to eq Time.now.strftime('%d-%m-%Y')
+    expect(subject.time).to eq Time.now.strftime('%d/%m/%Y')
   end
   
   it 'should be able to record user deposit transaktions' do
-    time = Time.now.strftime('%d-%m-%Y')
+    time = Time.now.strftime('%d/%m/%Y')
     transaktion = 500
     balance = transaktion
     bank_statement.user_deposits(transaktion, balance)
@@ -17,7 +17,7 @@ describe UserAccountTransactions do
   end
 
   it 'should be able to record user withdrawals from account' do
-    time = Time.now.strftime('%d-%m-%Y')
+    time = Time.now.strftime('%d/%m/%Y')
     transaktion = 500
     balance = transaktion
     bank_statement.user_withdrawals(transaktion, balance)

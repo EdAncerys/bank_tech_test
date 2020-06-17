@@ -1,7 +1,7 @@
 require 'bank'
 
 describe Bank do
-  let(:bank) { Bank.new }
+  let(:bank) { described_class.new }
   let(:deposit_transaction) { "10/01/2012 || 1000.00 || || 1000.00" }
   let(:statements) { double("Statements", print_balance: deposit_transaction) }
 

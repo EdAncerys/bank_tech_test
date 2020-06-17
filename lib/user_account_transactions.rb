@@ -3,7 +3,7 @@ class UserAccountTransactions
 
   def initialize
     @user_transaktions = []
-    @time = Time.now.strftime('%d-%m-%Y')
+    @time = Time.now.strftime('%d/%m/%Y')
   end
 
   def user_deposits(transaction, balance)
