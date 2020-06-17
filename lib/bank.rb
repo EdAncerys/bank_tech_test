@@ -14,6 +14,7 @@ class Bank
   end
 
   def withdraw_from_account(amount)
+    raise 'Transaktion not valid: amount to withdraw can not be negative' if amount < 0
     raise 'Transaktion not valid: balance not sufficient' if @balance < amount
     @balance -= amount
   end

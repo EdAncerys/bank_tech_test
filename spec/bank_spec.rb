@@ -31,6 +31,11 @@ describe Bank do
       error = 'Transaktion not valid: balance not sufficient'
       expect { bank.withdraw_from_account(100) }.to raise_error error
     end
+
+    it 'should not allow to withdraw negative amount' do
+      error = 'Transaktion not valid: amount to withdraw can not be negative'
+      expect { bank.withdraw_from_account(-100) }.to raise_error error
+    end
   end
 
   context 'Print account statement with deposit only' do
