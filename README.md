@@ -90,13 +90,19 @@ ed@Eds-MacBook-Pro bank_tech_test (master) $ irb
 2.7.0 :001 > require './lib/bank.rb'
  => true
 2.7.0 :002 > bank = Bank.new
-2.7.0 :003 > bank.deposit_to_account 100
- => 100
-2.7.0 :004 > bank.withdraw_from_account 40
- => 60
-2.7.0 :005 > bank.print_account_statement
- => "date || credit || debit || balance, 17/06/2020 || || £40.00 || £100.00\n, 17/06/2020 || £100.00 || || £0.00\n"
-2.7.0 :006 >
+2.7.0 :003 > bank.deposit_to_account 200
+ => 200
+2.7.0 :004 > bank.withdraw_from_account 50
+ => 150
+2.7.0 :005 > bank.withdraw_from_account 80
+ => 70
+2.7.0 :006 > bank.print_account_statement
+date || credit || debit || balance
+21/06/2020 || || £80.00 || £150.00
+21/06/2020 || || £50.00 || £200.00
+21/06/2020 || £200.00 || || £0.00
+ => ["21/06/2020 || || £80.00 || £150.00", "21/06/2020 || || £50.00 || £200.00", "21/06/2020 || £200.00 || || £0.00"]
+2.7.0 :007 >
 ```
 
 ### Final Product Functionality
