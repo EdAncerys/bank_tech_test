@@ -1,6 +1,6 @@
-\_<h1 align="center">'Bank_tech_test'</h1>
+# Bank tech test
 
-Session goals:
+## Session goals:
 
 - Producing the best code you can when there is a minimal time pressure.
 - Practice your OO design and TDD skills.
@@ -108,13 +108,13 @@ Account transactions stored in local storage.
 ### RSpec and test coverage
 
 <div align="center">
-  <img alt="bank_tech_test" height="400px" src="./images/tests_bank_01.png">
+  <img alt="bank_tech_test" width="600px" src="./images/tests_bank_01.png">
 </div>
 
 ### User interface preview
 
 <div align="center">
-  <img alt="bank_tech_test" height="300px" src="./images/irb_bank_01.png">
+  <img alt="bank_tech_test" width="600px" src="./images/irb_bank_01.png">
 </div>
 
 ## License

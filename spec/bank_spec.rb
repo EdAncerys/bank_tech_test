@@ -23,26 +23,26 @@ describe Bank do
     expect(bank.balance).to eq 0
   end
 
-  context 'Catch errors if user transaktion not walid' do
+  context 'Catch errors if user transaction not walid' do
     it 'should not allow to deposit negative amount' do
-      error = 'Transaktion not valid: not able to deposit negative balance'
+      error = 'transaction not valid: not able to deposit negative balance'
       expect { bank.deposit_to_account(-100) }.to raise_error error
     end
 
     it 'should not allow to withdraw more than a balance' do
-      error = 'Transaktion not valid: balance not sufficient'
+      error = 'transaction not valid: balance not sufficient'
       expect { bank.withdraw_from_account(100) }.to raise_error error
     end
 
     it 'should not allow to withdraw negative amount' do
-      error = 'Transaktion not valid: amount to withdraw can not be negative'
+      error = 'transaction not valid: amount to withdraw can not be negative'
       expect { bank.withdraw_from_account(-100) }.to raise_error error
     end
   end
 
   context 'Print account statement when deposit made' do
     it 'should be able to print account statement' do
-      allow(user_account).to receive(:user_transaktions)
+      allow(user_account).to receive(:transaction)
       allow(statements).to receive(:print_balance).with deposit_transaction
       bank = Bank.new(user_account, statements)
 
