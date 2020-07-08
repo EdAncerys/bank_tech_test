@@ -1,6 +1,8 @@
 # Bank tech test
 
-## Session goals:
+[Project Description](#project-description) | [Installation](#getting-started) | [Running tests](#running-tests) | [User Stories](#user-stories) | [Models](#domain-models) | [Further development](#further-development)
+
+## Project Description
 
 - Producing the best code you can when there is a minimal time pressure.
 - Practice your OO design and TDD skills.
@@ -64,25 +66,31 @@ We able to raise an error
 | #withdraw_from_account()   | #withdrawal()          |
 | #print_account_statement() |                        |
 
-## Getting Started
+### Getting Started
 
-To run **Bank_tech_test** you will have to fork this repo and clone to your local machine.
+- Clone this repository
+  `$ git clone https://github.com/EdAncerys/bank_tech_test`
+- Navigate to local repository
+  `$ cd bank_tech_test`
+- Install bundler if you don't already have it
+  `$ gem bundle install`
+- Install all dependencies
+  `$ bundle install`
 
-Navigate to repository via command line and follow instructions below:
+## Running tests
 
-To install gems dependencies used in a project:
+- Navigate to local repository
+  `$ cd bank_tech_test`
+- In the terminal type the following command:
+  `$ rspec`
 
-```
-bundle
-```
+## RSpec and test coverage
 
-To run tests with **RSpec**:
+<div align="center">
+  <img alt="bank_tech_test" width="600px" src="./images/tests_bank_01.png">
+</div>
 
-```
-rspec
-```
-
-To run the program in **irb** environment:
+## Running the program in **irb** environment:
 
 ```
 irb
@@ -105,24 +113,20 @@ date || credit || debit || balance
 2.7.0 :007 >
 ```
 
-### Final Product Functionality
+## Final Product Functionality
 
 As a User able to perform bank transactions such as a deposit to a bank account, withdraw from a bank account, print bank statements.
 
-Account transactions stored in local storage.
+All account transactions stored in local storage.
 
-### RSpec and test coverage
+## Further Development
 
-<div align="center">
-  <img alt="bank_tech_test" width="600px" src="./images/tests_bank_01.png">
-</div>
+Ideas to improve application
 
-### User interface preview
+- Add feature to have UI
+- Add feature to save bank transactions to local storage or DB
+- Add extra features that mimic real bank functionality
 
-<div align="center">
-  <img alt="bank_tech_test" width="600px" src="./images/irb_bank_01.png">
-</div>
+### License
 
-## License
-
-The package is available as open source
+The project is available as open source
