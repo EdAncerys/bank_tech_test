@@ -4,7 +4,7 @@ describe('Bank', function () {
     bank = new Bank();
   });
 
-  it('statement', () => {
-    expect(true).toBe(true);
+  it('current balance at start should be eq 0', () => {
+    expect(bank.currentBalance()).toEqual(0);
   });
 });
