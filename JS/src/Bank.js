@@ -1,7 +1,15 @@
 'use strict';
+
 class Bank {
   constructor() {
     this.balance = 0;
+    this.statement = {};
+    this.id = 0;
+  }
+
+  todaysDay() {
+    const date = new Date();
+    return date.toLocaleDateString('en-US');
   }
 
   currentBalance() {
@@ -13,7 +21,12 @@ class Bank {
       throw new TypeError('Not able to deposit negative amount');
       // return 'blah';
     }
-    return (this.balance += amount);
+    this.balance += amount;
+    this.statement[`Transaktion ID ${this.id}`] = `Amount: ${amount} Balance: ${
+      this.balance
+    } Date: ${this.todaysDay()}`;
+    this.id += 1;
+    return this.balance;
   }
 
   withdrawFromAccount(amount) {
@@ -21,5 +34,9 @@ class Bank {
       throw new TypeError('Withdrawal amount is greater than current balance');
     }
     return (this.balance -= amount);
+  }
+
+  printStatement() {
+    return this.statement;
   }
 }

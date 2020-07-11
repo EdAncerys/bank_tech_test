@@ -1,6 +1,8 @@
 describe('Bank', function () {
   var bank;
+  var date = new Date();
   beforeEach(function () {
+    dateNow = date.toLocaleDateString('en-US');
     bank = new Bank();
   });
 
@@ -35,6 +37,13 @@ describe('Bank', function () {
       expect(() => {
         bank.withdrawFromAccount(100);
       }).toThrowError(TypeError);
+    });
+  });
+
+  it('should be able to print account balance', () => {
+    bank.depositToAccount(100);
+    expect(bank.printStatement()).toEqual({
+      'Transaktion ID 0': `Amount: 100 Balance: 100 Date: ${dateNow}`,
     });
   });
 });
