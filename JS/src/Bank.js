@@ -21,12 +21,16 @@ class Bank {
       throw new TypeError('Not able to deposit negative amount');
       // return 'blah';
     }
+    this._statementDeposit(amount);
+    return this.balance;
+  }
+
+  _statementDeposit(amount) {
     this.balance += amount;
     this.statement[
-      `Transaktion ID ${this.id}`
+      `Transaction ID ${this.id}`
     ] = `Deposit: ${amount} Balance: ${this.balance} Date: ${this.todaysDay()}`;
     this.id += 1;
-    return this.balance;
   }
 
   withdrawFromAccount(amount) {
@@ -34,13 +38,17 @@ class Bank {
       throw new TypeError('Withdrawal amount is greater than current balance');
     }
     this.balance -= amount;
+    this._statementWithdrawal(amount);
+    return this.balance;
+  }
+
+  _statementWithdrawal(amount) {
     this.statement[
-      `Transaktion ID ${this.id}`
+      `Transaction ID ${this.id}`
     ] = `Withdrawal: ${amount} Balance: ${
       this.balance
     } Date: ${this.todaysDay()}`;
     this.id += 1;
-    return this.balance;
   }
 
   printStatement() {

@@ -52,7 +52,7 @@ describe('Bank', function () {
     it('should be able to print account balance after deposit', () => {
       bank.depositToAccount(100);
       expect(bank.printStatement()).toEqual({
-        'Transaktion ID 0': `Deposit: 100 Balance: 100 Date: ${dateNow}`,
+        'Transaction ID 0': `Deposit: 100 Balance: 100 Date: ${dateNow}`,
       });
     });
 
@@ -60,8 +60,8 @@ describe('Bank', function () {
       bank.depositToAccount(100);
       bank.withdrawFromAccount(30);
       expect(bank.printStatement()).toEqual({
-        'Transaktion ID 0': `Deposit: 100 Balance: 100 Date: ${dateNow}`,
-        'Transaktion ID 1': `Withdrawal: 30 Balance: 70 Date: ${dateNow}`,
+        'Transaction ID 0': `Deposit: 100 Balance: 100 Date: ${dateNow}`,
+        'Transaction ID 1': `Withdrawal: 30 Balance: 70 Date: ${dateNow}`,
       });
     });
   });
