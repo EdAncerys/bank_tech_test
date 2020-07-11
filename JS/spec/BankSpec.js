@@ -29,4 +29,10 @@ describe('Bank', function () {
     }).toThrowError(TypeError);
     // expect(bank.depositToAccount(-100)).toEqual('blah');
   });
+
+  it('should be able to throw error if withdrawal amount > balance', () => {
+    expect(() => {
+      bank.withdrawFromAccount(100);
+    }).toThrowError(TypeError);
+  });
 });

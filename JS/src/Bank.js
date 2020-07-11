@@ -17,6 +17,9 @@ class Bank {
   }
 
   withdrawFromAccount(amount) {
+    if (amount > this.balance) {
+      throw new TypeError('Withdrawal amount is greater than current balance');
+    }
     return (this.balance -= amount);
   }
 }
