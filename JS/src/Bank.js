@@ -44,6 +44,18 @@ class Bank {
   }
 
   printStatement() {
+    if (this._isEmpty(this.statement)) {
+      throw new TypeError('No transactions been made');
+    }
     return this.statement;
+  }
+
+  _isEmpty(obj) {
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        return false;
+      }
+    }
+    return JSON.stringify(obj) === JSON.stringify({});
   }
 }

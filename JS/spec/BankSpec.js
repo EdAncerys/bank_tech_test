@@ -40,6 +40,12 @@ describe('Bank', function () {
         bank.withdrawFromAccount(100);
       }).toThrowError(TypeError);
     });
+
+    it('should be able to throw error if try to print balance when no transactions', () => {
+      expect(() => {
+        bank.printStatement();
+      }).toThrowError(TypeError);
+    });
   });
 
   describe('Printing balance', () => {
