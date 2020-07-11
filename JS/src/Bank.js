@@ -11,4 +11,8 @@ class Bank {
   depositToAccount(amount) {
     return (this.balance += amount);
   }
+
+  withdrawFromAccount(amount) {
+    return (this.balance -= amount);
+  }
 }
