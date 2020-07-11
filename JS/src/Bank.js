@@ -22,9 +22,9 @@ class Bank {
       // return 'blah';
     }
     this.balance += amount;
-    this.statement[`Transaktion ID ${this.id}`] = `Amount: ${amount} Balance: ${
-      this.balance
-    } Date: ${this.todaysDay()}`;
+    this.statement[
+      `Transaktion ID ${this.id}`
+    ] = `Deposit: ${amount} Balance: ${this.balance} Date: ${this.todaysDay()}`;
     this.id += 1;
     return this.balance;
   }
@@ -33,7 +33,14 @@ class Bank {
     if (amount > this.balance) {
       throw new TypeError('Withdrawal amount is greater than current balance');
     }
-    return (this.balance -= amount);
+    this.balance -= amount;
+    this.statement[
+      `Transaktion ID ${this.id}`
+    ] = `Withdrawal: ${amount} Balance: ${
+      this.balance
+    } Date: ${this.todaysDay()}`;
+    this.id += 1;
+    return this.balance;
   }
 
   printStatement() {
