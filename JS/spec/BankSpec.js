@@ -16,4 +16,10 @@ describe('Bank', function () {
     bank.depositToAccount(150);
     expect(bank.withdrawFromAccount(50)).toEqual(100);
   });
+
+  it('should be able to top up and withdraw from account', () => {
+    bank.depositToAccount(200);
+    bank.withdrawFromAccount(100);
+    expect(bank.currentBalance()).toEqual(100);
+  });
 });
