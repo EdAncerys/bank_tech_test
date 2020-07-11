@@ -9,6 +9,10 @@ class Bank {
   }
 
   depositToAccount(amount) {
+    if (amount < 0) {
+      throw new TypeError('Not able to deposit negative amount');
+      // return 'blah';
+    }
     return (this.balance += amount);
   }
 

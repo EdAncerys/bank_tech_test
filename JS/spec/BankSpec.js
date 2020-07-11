@@ -22,4 +22,11 @@ describe('Bank', function () {
     bank.withdrawFromAccount(100);
     expect(bank.currentBalance()).toEqual(100);
   });
+
+  it('should be able to throw error if deposited amount is negative', () => {
+    expect(() => {
+      bank.depositToAccount(-100);
+    }).toThrowError(TypeError);
+    // expect(bank.depositToAccount(-100)).toEqual('blah');
+  });
 });
