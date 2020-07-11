@@ -7,4 +7,8 @@ class Bank {
   currentBalance() {
     return this.balance;
   }
+
+  depositToAccount(amount) {
+    return (this.balance += amount);
+  }
 }
